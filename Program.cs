@@ -42,31 +42,28 @@
 //РЕШЕНИЕ
 
 
-// Console.WriteLine("Введите размер массива: ");
-// int num = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите размер массива: ");
+int num = int.Parse(Console.ReadLine()!);
 
 
-// int[] array = new int[num];
-// GetArray(array.Length);
-// Console.WriteLine($"[{String.Join(", ", array)}] ");
+int[] array = new int[num];
+GetArray(array.Length);
+Console.WriteLine($"[{String.Join(", ", array)}] ");
 
 
-// void GetArray (int size){
-//     for (int i = 0; i < size; i++){
-//         array[i] = new Random().Next(-100,100);
-//     }
-// }
+void GetArray (int size){
+    for (int i = 0; i < size; i++){
+        array[i] = new Random().Next(-100,100);
+    }
+}
 
-// int sum = 0;
-// for (int i = 0; i < array.Length; i++){
-//     if (i % 2 == 0){
-
-//     }
-//     else{
-//         sum = sum + array[i];
-//     }
-// }
-// Console.WriteLine($"Сумма элементов, стоящих на нечетных позициях равна {sum} ");
+int sum = 0;
+for (int i = 0; i < array.Length; i++){
+    if (i % 2 != 0){
+        sum = sum + array[i];
+    }
+}
+Console.WriteLine($"Сумма элементов, стоящих на нечетных позициях равна {sum} ");
 
 
 
@@ -106,3 +103,5 @@
 //     result = numberMax - numberMin;
 // }
 // Console.WriteLine($"Разница между {numberMax} и {numberMin} = {result}");
+
+
